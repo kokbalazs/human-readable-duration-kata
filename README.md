@@ -30,3 +30,16 @@ Different components have different unit of times. So there is not repeated unit
 A component will not appear at all if its value happens to be zero. Hence, 1 minute and 0 seconds is not valid, but it should be just 1 minute.
 
 A unit of time must be used "as much as possible". It means that the function should not return 61 seconds, but 1 minute and 1 second instead. Formally, the duration specified by of a component must not be greater than any valid more significant unit of time.
+
+## Usage
+
+* Start application
+* Open Postman or any other API testing tool
+* Create a GET request to `localhost:8080/duration?durationInSeconds={seconds}` where `{seconds}` is the number of seconds you want to format
+* Send the request
+
+Alternatively you can curl the API using `curl` command:
+
+```bash
+curl -X GET "http://localhost:8080/duration?durationInSeconds=3662"
+```
